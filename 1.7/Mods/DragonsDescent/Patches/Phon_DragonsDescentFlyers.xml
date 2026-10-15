@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName="Black_Dragon" or defName="Blue_Dragon" or defName="Green_Dragon" or defName="Purple_Dragon" or defName="DD_Orange_Dragon" or defName="Red_Dragon" or defName="White_Dragon" or defName="Yellow_Dragon"]</xpath>
+		<value>
+			<li Class="GiddyUpTakeFlight.FlyingMount">
+				<worldFlightRange>10</worldFlightRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName="Gold_Dragon" or defName="Silver_Dragon" or defName="Jade_Dragon"]</xpath>
+		<value>
+			<li Class="GiddyUpTakeFlight.FlyingMount">
+				<worldFlightRange>14</worldFlightRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName="True_Dragon"]</xpath>
+		<value>
+			<li Class="GiddyUpTakeFlight.FlyingMount">
+				<worldFlightRange>20</worldFlightRange>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

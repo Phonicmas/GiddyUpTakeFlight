@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Excluded>
+    <exclude>.git</exclude>
+    <exclude>1.7\Source</exclude>
+    <exclude>README.md</exclude>
+  </Excluded>
+</Configuration>

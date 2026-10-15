@@ -1,0 +1,11 @@
+<loadFolders>
+
+	<v1.7>
+		<li>/</li>
+		<li>1.7</li>
+		<li IfModActive="onyxae.dragonsdescent">1.7/Mods/DragonsDescent</li>
+		<li IfModActive="Hol.DragonGenetics">1.7/Mods/DragonGenetics</li>
+		<li IfModActive="veterano.mythicages.megafaunabestiary">1.7/Mods/MythicAgesBestiary</li>
+	</v1.7>
+
+</loadFolders>

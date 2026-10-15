@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>GiddyUpTakeFlight</RootNamespace>
+    <AssemblyName>GiddyUpTakeFlight</AssemblyName>
+    <Configurations>Release</Configurations>
+    <OutputPath>../../Assemblies/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <RimWorldDir>..\..\..\..\..\</RimWorldDir>
+    <WorkshopDir>..\..\..\..\..\..\..\workshop\content\294100\</WorkshopDir>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="packages\**;.idea\**" />
+    <None Remove="packages\**;.idea\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="$(RimWorldDir)System*.dll" Exclude="$(RimWorldDir)System.IO.Compression.Native.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="$(RimWorldDir)mscorlib.dll;$(RimWorldDir)netstandard.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldDir)Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>$(RimWorldDir)UnityStubs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(WorkshopDir)2009463077\1.7\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GiddyUpCore">
+      <HintPath>$(WorkshopDir)3674332861\1.7\Assemblies\GiddyUpCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

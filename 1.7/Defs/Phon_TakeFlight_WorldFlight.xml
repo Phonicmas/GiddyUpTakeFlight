@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>Phon_MountedFlyerTransporter</defName>
+		<label>flying mount</label>
+		<thingClass>Thing</thingClass>
+		<dropPodActive>Phon_MountedFlyerActive</dropPodActive>
+		<dropPodFaller>Phon_MountedFlyerIncoming</dropPodFaller>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>Phon_MountedFlyerActive</defName>
+		<label>landing flying mount</label>
+		<category>Item</category>
+		<thingClass>GiddyUpTakeFlight.MountedFlyerActive</thingClass>
+		<drawerType>RealtimeOnly</drawerType>
+		<tickerType>Normal</tickerType>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>false</useHitPoints>
+		<selectable>false</selectable>
+		<altitudeLayer>Building</altitudeLayer>
+		<graphicData>
+			<texPath>Things/Special/Phon_Invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef ParentName="SkyfallerBase">
+		<defName>Phon_MountedFlyerLeaving</defName>
+		<label>flying mount (leaving)</label>
+		<thingClass>GiddyUpTakeFlight.MountedFlyerLeaving</thingClass>
+		<graphicData>
+			<texPath>Things/Special/Phon_Invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<skyfaller>
+			<movementType>Decelerate</movementType>
+			<reversed>true</reversed>
+			<hitRoof>false</hitRoof>
+			<shadow>Things/Skyfaller/SkyfallerShadowCircle</shadow>
+			<shadowSize>(2, 2)</shadowSize>
+			<ticksToImpactRange>-120~-90</ticksToImpactRange>
+		</skyfaller>
+	</ThingDef>
+
+	<ThingDef ParentName="SkyfallerBase">
+		<defName>Phon_MountedFlyerIncoming</defName>
+		<label>flying mount (incoming)</label>
+		<thingClass>GiddyUpTakeFlight.MountedFlyerIncoming</thingClass>
+		<graphicData>
+			<texPath>Things/Special/Phon_Invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<skyfaller>
+			<movementType>Decelerate</movementType>
+			<hitRoof>false</hitRoof>
+			<shadow>Things/Skyfaller/SkyfallerShadowCircle</shadow>
+			<shadowSize>(2, 2)</shadowSize>
+			<ticksToImpactRange>150~180</ticksToImpactRange>
+			<motesPerCell>0</motesPerCell>
+		</skyfaller>
+	</ThingDef>
+
+	<WorldObjectDef>
+		<defName>Phon_TravellingMountedFlyers</defName>
+		<label>flying mounts</label>
+		<description>Riders on flying mounts, crossing the sky.</description>
+		<worldObjectClass>GiddyUpTakeFlight.TravellingMountedFlyers</worldObjectClass>
+		<texture>World/WorldObjects/Phon_FlyingMounts</texture>
+		<useDynamicDrawer>true</useDynamicDrawer>
+		<expandingIcon>true</expandingIcon>
+		<expandingIconTexture>World/WorldObjects/Expanding/Phon_FlyingMounts</expandingIconTexture>
+		<expandingIconPriority>60</expandingIconPriority>
+		<expandMore>true</expandMore>
+		<allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+		<validLaunchTarget>false</validLaunchTarget>
+	</WorldObjectDef>
+
+</Defs>

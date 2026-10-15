@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName="MA_Harpeagle"]</xpath>
+		<value>
+			<li Class="GiddyUpTakeFlight.FlyingMount">
+				<worldFlightRange>8</worldFlightRange>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

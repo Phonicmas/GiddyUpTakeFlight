@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Giddy-Up 2: Take Flight</name>
+	<author>Phonicmas</author>
+	<packageId>Phonicmas.GiddyUp.TakeFlight</packageId>
+	<modVersion>1.0.0</modVersion>
+	<supportedVersions>
+		<li>1.7</li>
+	</supportedVersions>
+	<description>An addon for Giddy-Up 2 that lets flying mounts actually fly.
+
+Flying over terrain:
+- Riders on a flying mount ignore terrain movement costs. Marsh, mud, sand and shallow water cost nothing extra.
+- They can cross deep water. Snow still slows them, and walls, buildings and closed doors still block them.
+
+Take flight:
+- A rider on a flying mount gets a "Take flight" button. Pick a spot within range and the mount carries its rider there through the air, over walls and water.
+- Afterwards the mount needs to rest for a while before it can take flight again.
+- By default both the take-off and landing spot need open sky.
+
+World flight:
+- Riders on flying mounts, or a caravan with them, can fly to another tile on the world map. The destination options are the same as transport pods: form a caravan, land on one of your maps, visit or attack a settlement, visit a site.
+- Every flying animal has a base range in tiles. Lighter loads fly further: at half the mount's carrying capacity the range doubles, up to ×3 by default.
+- A mount carrying more than its carrying capacity can't take flight at all.
+- After a world flight the mount rests for a while, longer the further it flew.
+- Riders who can't fly stay behind as their own caravan.
+
+Which animals fly:
+- Animals that can fly in vanilla (the flight system from Odyssey).
+- Floating creatures from Vanilla Expanded Framework, such as the Alpha Animals floaters and the Dark Ages phrak.
+- The dragons from Dragons Descent, the winged hybrids from Dragon Genetics and the harpeagle from Mythic Ages: Megafauna Bestiary.
+- Any mountable animal can be switched on or off in the mod settings, along with the flight ranges, speed, rest times and the open sky rule.
+
+For modders:
+Mark an animal as a flying mount with the GiddyUpTakeFlight.FlyingMount mod extension. Every field is optional; leave one out to use the mod setting.
+
+Example, directly on your animal's ThingDef:
+
+&lt;ThingDef ParentName="AnimalThingBase"&gt;
+  &lt;defName&gt;MyGriffin&lt;/defName&gt;
+  ...
+  &lt;modExtensions&gt;
+    &lt;li Class="GiddyUpTakeFlight.FlyingMount"&gt;
+      &lt;canFly&gt;true&lt;/canFly&gt;                       &lt;!-- false stops an auto-detected animal from flying --&gt;
+      &lt;rangeFactor&gt;1.2&lt;/rangeFactor&gt;              &lt;!-- multiplies the Take flight range on the map --&gt;
+      &lt;cooldownFactor&gt;0.8&lt;/cooldownFactor&gt;        &lt;!-- multiplies the rest time after a flight --&gt;
+      &lt;worldFlightRange&gt;12&lt;/worldFlightRange&gt;     &lt;!-- world map range in tiles at full load, 0 = no world flight --&gt;
+      &lt;maxRangeMultiplier&gt;3&lt;/maxRangeMultiplier&gt;  &lt;!-- cap on the light-load range bonus --&gt;
+      &lt;worldFlightSpeed&gt;120&lt;/worldFlightSpeed&gt;     &lt;!-- tiles per day --&gt;
+      &lt;rangeByLoad&gt;                               &lt;!-- replaces the capacity / load formula. x = load / capacity, y = range multiplier --&gt;
+        &lt;points&gt;
+          &lt;li&gt;(0.25, 3)&lt;/li&gt;
+          &lt;li&gt;(1, 1)&lt;/li&gt;
+        &lt;/points&gt;
+      &lt;/rangeByLoad&gt;
+    &lt;/li&gt;
+  &lt;/modExtensions&gt;
+&lt;/ThingDef&gt;
+
+Example patch for another mod's animal (no dependency needed, it only applies if the animal exists):
+
+&lt;Patch&gt;
+  &lt;Operation Class="PatchOperationAddModExtension"&gt;
+    &lt;success&gt;Always&lt;/success&gt;
+    &lt;xpath&gt;Defs/ThingDef[defName="SomeModGriffin"]&lt;/xpath&gt;
+    &lt;value&gt;
+      &lt;li Class="GiddyUpTakeFlight.FlyingMount"&gt;
+        &lt;worldFlightRange&gt;10&lt;/worldFlightRange&gt;
+      &lt;/li&gt;
+    &lt;/value&gt;
+  &lt;/Operation&gt;
+&lt;/Patch&gt;
+
+Safe to add to an existing save.
+
+AI disclosure: the preview image was made with generative AI.</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>MemeGoddess.GiddyUp</packageId>
+			<displayName>Giddy-Up 2 - Continued</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/3674332861</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>MemeGoddess.GiddyUp</li>
+		<li>onyxae.dragonsdescent</li>
+		<li>Hol.DragonGenetics</li>
+		<li>veterano.mythicages.megafaunabestiary</li>
+	</loadAfter>
+</ModMetaData>

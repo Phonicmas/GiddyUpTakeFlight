@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<!-- Take flight command -->
+	<Phon_TF_TakeFlight>Take flight</Phon_TF_TakeFlight>
+	<Phon_TF_TakeFlightDesc>Fly {MOUNT_labelShort} to a spot up to {RANGE} cells away, straight over walls, water and anything else in the way.</Phon_TF_TakeFlightDesc>
+	<Phon_TF_TakeFlightCooldown>Afterwards {MOUNT_labelShort} needs {TIME} to rest before flying again.</Phon_TF_TakeFlightCooldown>
+	<Phon_TF_MountFatigued>{MOUNT_labelShort} is still resting from the last flight ({TIME} left).</Phon_TF_MountFatigued>
+	<Phon_TF_CarryingSomething>{RIDER_labelShort} can't take flight while carrying something.</Phon_TF_CarryingSomething>
+	<Phon_TF_Vacuum>{MOUNT_labelShort} can't fly in a vacuum.</Phon_TF_Vacuum>
+	<Phon_TF_RoofedTakeOff>Needs open sky to take off.</Phon_TF_RoofedTakeOff>
+	<Phon_TF_RoofedLanding>Needs open sky to land.</Phon_TF_RoofedLanding>
+	<Phon_TF_OutOfRange>Out of range.</Phon_TF_OutOfRange>
+	<Phon_TF_CannotLand>Can't land there.</Phon_TF_CannotLand>
+	<Phon_TF_Overloaded>{MOUNT_labelShort} is carrying too much to fly ({LOAD} of {CAPACITY}).</Phon_TF_Overloaded>
+
+	<!-- World flight -->
+	<Phon_TF_FlyWorld>Fly to another tile</Phon_TF_FlyWorld>
+	<Phon_TF_FlyWorldDesc>Fly {MOUNT_labelShort} and its rider to another tile on the world map. Every selected rider on a flying mount comes along, and the group flies as far as its shortest range.</Phon_TF_FlyWorldDesc>
+	<Phon_TF_FlyCaravan>Fly to another tile</Phon_TF_FlyCaravan>
+	<Phon_TF_FlyCaravanDesc>Riders on flying mounts fly to another tile on the world map. Everyone else stays behind as a caravan. The group flies as far as its shortest range.</Phon_TF_FlyCaravanDesc>
+	<Phon_TF_LoadReport>Load {LOAD} of {CAPACITY}: range ×{MULT}, {RANGE} tiles.</Phon_TF_LoadReport>
+	<Phon_TF_NoWorldRange>{MOUNT_labelShort} can't fly across the world map.</Phon_TF_NoWorldRange>
+	<Phon_TF_PairDowned>{RIDER_labelShort} or {MOUNT_labelShort} is downed.</Phon_TF_PairDowned>
+	<Phon_TF_NoRiderForFlyer>Nobody in this caravan can ride its flying mounts.</Phon_TF_NoRiderForFlyer>
+	<Phon_TF_WouldStrand>The pawns left behind would have nobody to lead the caravan.</Phon_TF_WouldStrand>
+	<Phon_TF_OtherLayer>Flying mounts can't reach that layer.</Phon_TF_OtherLayer>
+
+	<!-- Settings -->
+	<Phon_TF_SettingIgnoreTerrain>Flying mounts ignore terrain</Phon_TF_SettingIgnoreTerrain>
+	<Phon_TF_SettingIgnoreTerrainDesc>Riders on a flying mount move over marsh, mud, sand and water at no extra cost, and can cross deep water. Snow still slows them, and walls, buildings and closed doors still block them.</Phon_TF_SettingIgnoreTerrainDesc>
+	<Phon_TF_SettingFlight>Take flight</Phon_TF_SettingFlight>
+	<Phon_TF_SettingFlightDesc>Gives riders on a flying mount a button to fly to a spot within range.</Phon_TF_SettingFlightDesc>
+	<Phon_TF_SettingOpenSky>Require open sky</Phon_TF_SettingOpenSky>
+	<Phon_TF_SettingOpenSkyDesc>Taking off and landing are only possible from and to unroofed cells.</Phon_TF_SettingOpenSkyDesc>
+	<Phon_TF_SettingRange>Flight range: {RANGE} cells</Phon_TF_SettingRange>
+	<Phon_TF_SettingTakeFlightSpeed>Take flight speed: {SPEED} cells per second</Phon_TF_SettingTakeFlightSpeed>
+	<Phon_TF_SettingCooldown>Rest after a flight: {HOURS} hours</Phon_TF_SettingCooldown>
+	<Phon_TF_SettingWorldFlight>World flight</Phon_TF_SettingWorldFlight>
+	<Phon_TF_SettingWorldFlightDesc>Gives riders on a flying mount, and caravans with them, a button to fly to another tile on the world map. Range depends on how much the mount carries compared to its carrying capacity.</Phon_TF_SettingWorldFlightDesc>
+	<Phon_TF_SettingWorldRange>Default world range: {RANGE} tiles</Phon_TF_SettingWorldRange>
+	<Phon_TF_SettingMaxMultiplier>Max range multiplier for light loads: ×{MULT}</Phon_TF_SettingMaxMultiplier>
+	<Phon_TF_SettingWorldSpeed>World flight speed: {SPEED} tiles per day</Phon_TF_SettingWorldSpeed>
+	<Phon_TF_SettingRestPerTile>Rest per tile flown: {HOURS} hours</Phon_TF_SettingRestPerTile>
+	<Phon_TF_SettingFlyers>Mountable animals that can fly:</Phon_TF_SettingFlyers>
+
+</LanguageData>

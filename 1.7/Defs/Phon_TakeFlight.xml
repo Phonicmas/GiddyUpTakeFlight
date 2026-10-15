@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="PawnFlyerBase">
+		<defName>Phon_MountedPawnFlyer</defName>
+		<label>flying mount</label>
+		<thingClass>GiddyUpTakeFlight.MountedPawnFlyer</thingClass>
+		<pawnFlyer>
+			<flightDurationMin>0.6</flightDurationMin>
+			<flightSpeed>9</flightSpeed>
+			<heightFactor>1.5</heightFactor>
+		</pawnFlyer>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>Phon_FlightFatigue</defName>
+		<label>flight fatigue</label>
+		<description>This creature recently carried a rider through the air and needs to rest its wings before it can take flight again.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.75, 0.85, 1)</defaultLabelColor>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>5000~5000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>
